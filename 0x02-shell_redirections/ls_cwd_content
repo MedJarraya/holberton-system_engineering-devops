@@ -1,0 +1,20 @@
+total 68
+drwxrwxr-x 2 blambertn blambertn 4096 Sep 13 14:28 .
+drwxrwxr-x 6 blambertn blambertn 4096 Sep 13 13:02 ..
+-rwxrw-r-- 1 blambertn blambertn   32 Sep 13 13:04 0-hello_world
+-rwxrw-r-- 1 blambertn blambertn   28 Sep 13 13:13 1-confused_smiley
+-rwxrw-r-- 1 blambertn blambertn   28 Sep 13 13:15 2-hellofile
+-rwxrw-r-- 1 blambertn blambertn   39 Sep 13 13:25 3-twofiles
+-rwxrw-r-- 1 blambertn blambertn   42 Sep 13 13:17 3-twofiles~
+-rwxrw-r-- 1 blambertn blambertn   33 Sep 13 13:30 4-lastlines
+-rwxrw-r-- 1 blambertn blambertn   33 Sep 13 13:34 5-firstlines
+-rwxrw-r-- 1 blambertn blambertn   40 Sep 13 13:50 6-third_line
+-rwxrw-r-- 1 blambertn blambertn   33 Sep 13 13:46 6-third_line~
+-rwxrw-r-- 1 blambertn blambertn  108 Sep 13 14:14 7-file
+-rwxrw-r-- 1 blambertn blambertn   70 Sep 13 14:11 7-file~
+-rwxrw-r-- 1 blambertn blambertn   37 Sep 13 14:28 8-cwd_state
+-rw-rw-r-- 1 blambertn blambertn   17 Sep 13 14:15 \*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 blambertn blambertn  800 Sep 13 13:37 iacta
+-rw-rw-r-- 1 blambertn blambertn    0 Sep 13 13:36 iacta~
+-rw-rw-r-- 1 blambertn blambertn    0 Sep 13 14:28 ls_cwd_content
+-rw-rw-r-- 1 blambertn blambertn    5 Sep 13 13:02 README.md
