@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays the content of the file /etc/passwd
+# Only username, user id and directory path for the user displays
+
+while read -r elm; do
+echo "$elm" | cut -d: -f1,3,6
+done < /etc/passwd
+
