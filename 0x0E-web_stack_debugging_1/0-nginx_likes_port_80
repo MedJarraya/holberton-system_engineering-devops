@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#fix port 80
-sudo rm -rf /etc/nginx/sites-enabled/default
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo nginx restart
+# Nginx listening to port 80
+sed -i -E 's/listen [0-9]+.+;/listen 80 default_server;/g' /etc/nginx/sites-enabled/default
+sed -i -E 's/listen \[::\]:.+;/\n/g' /etc/nginx/sites-enabled/default
+sudo /etc/init.d/nginx start
+sudo /etc/init.d/nginx restart
