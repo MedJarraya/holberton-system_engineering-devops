@@ -1,28 +1,31 @@
 #!/usr/bin/python3
+"""
+    Python script that, for a given employee ID, returns
+    information about his/her TODO list progress.
+"""
+
+import requests
+import sys
+
 if __name__ == "__main__":
+    id = sys.argv[1]
+    usr_url = "https://jsonplaceholder.typicode.com/users/{}".format(id)
+    tds_url = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
 
-    import requests
-    from sys import argv
-    if len(argv) < 2:
-        exit()
-    todos = requests.get(
-        "https://jsonplaceholder.typicode.com/todos?userId={}&completed=true"
-        .format(argv[1]))
-    name = requests.get(
-        "https://jsonplaceholder.typicode.com/users?id={}"
-        .format(argv[1]))
-    name = name.json()
-    name = name[0]["name"]
-    todo = requests.get(
-        "https://jsonplaceholder.typicode.com/todos?userId={}".format(argv[1]))
-    todo = todo.json()
-    todo = len(todo)
-    todos = todos.json()
-    todo_list = []
+    user = requests.get(usr_url).json()
+    todo = requests.get(tds_url).json()
 
-    for x in todos:
-        todo_list.append("\t {}".format(x["title"]))
-    print("Employee {} is done with tasks({}/{}):"
-          .format(name, len(todos), todo))
-    for y in todo_list:
-        print(y)
+    completed_nb = 0
+    total_nb = 0
+    completed_tasks = []
+
+    for task in todo:
+        total_nb += 1
+        if task.get("completed") is True:
+            completed_nb += 1
+            completed_tasks.append(task.get("title"))
+
+    sentence = "Employee {} is done with tasks({}/{}):"
+    print(sentence.format(user.get("name"), completed_nb, total_nb))
+    for task in completed_tasks:
+        print("\t {}".format(task))
